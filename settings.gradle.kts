@@ -1,1 +1,1 @@
-rootProject.name = "SocialismusModule"
+rootProject.name = "SocialismusRedis"

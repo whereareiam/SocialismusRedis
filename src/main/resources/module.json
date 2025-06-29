@@ -1,5 +1,5 @@
 {
-  "name": "SocialismusModule",
+  "name": "SocialismusRedis",
   "version": "0.0.1",
   "authors": [
     "whereareiam"
@@ -7,11 +7,12 @@
   "supportedPlatforms": [
     "VELOCITY",
     "PAPER",
-    "BUKKIT"
+    "BUKKIT",
+    "FOLIA"
   ],
   "supportedVersions": [
     "ALL"
   ],
   "dependencies": [],
-  "main": "me.whereareiam.socialismus.module.template.Module"
+  "main": "me.whereareiam.socialismus.module.redis.SocialismusRedis"
 }

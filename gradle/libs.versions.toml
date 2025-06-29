@@ -1,6 +1,6 @@
 [versions]
 
-socialismus = "2.0.0-RC2"
+socialismus = "feature~resource-provider-SNAPSHOT"
 
 # compile time processing
 lombok = "1.18.38"
