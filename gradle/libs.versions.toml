@@ -1,5 +1,8 @@
 [versions]
 
+# plugins
+shadow = "8.3.7"
+
 socialismus = "feature~resource-provider-SNAPSHOT"
 
 # compile time processing
@@ -7,6 +10,7 @@ lombok = "1.18.38"
 
 # general
 guice = "7.0.0"
+jedis = "6.0.0"
 
 [libraries]
 
@@ -17,7 +21,10 @@ lombok = { group = "org.projectlombok", name = "lombok", version.ref = "lombok" 
 
 # general
 guice = { group = "com.google.inject", name = "guice", version.ref = "guice" }
+jedis = { group = "redis.clients", name = "jedis", version.ref = "jedis" }
 
 [bundles]
 
 [plugins]
+
+shadow = { id = "com.gradleup.shadow", version.ref = "shadow" }
