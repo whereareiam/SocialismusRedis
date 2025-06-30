@@ -2,6 +2,7 @@ package me.whereareiam.socialismus.module.redis.configuration;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.name.Names;
+import lombok.AllArgsConstructor;
 import me.whereareiam.socialismus.module.redis.api.model.RedisSettings;
 import me.whereareiam.socialismus.module.redis.configuration.provider.RedisSettingsProvider;
 
@@ -9,12 +10,9 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
+@AllArgsConstructor
 public class ConfigBinder extends AbstractModule {
 	private final Path workingPath;
-
-	public ConfigBinder(Path workingDirectory) {
-		this.workingPath = workingDirectory;
-	}
 
 	@Override
 	protected void configure() {
