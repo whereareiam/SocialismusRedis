@@ -1,15 +1,13 @@
-package me.whereareiam.socialismus.module.redis.configuration.template;
+package me.whereareiam.socialismus.module.redis.common.config.template;
 
 import com.google.inject.Singleton;
-import me.whereareiam.socialismus.api.output.DefaultConfig;
+import me.whereareiam.configura.TemplateProvider;
 import me.whereareiam.socialismus.module.redis.api.model.RedisSettings;
 
 @Singleton
-public class RedisSettingsTemplate implements DefaultConfig<RedisSettings> {
+public class RedisSettingsTemplate implements TemplateProvider<RedisSettings> {
 	@Override
-	public RedisSettings getDefault() {
-		RedisSettings config = new RedisSettings();
-
+	public RedisSettings supply(RedisSettings config) {
 		// Default values
 		RedisSettings.Redis redis = new RedisSettings.Redis();
 		redis.setHost("localhost");

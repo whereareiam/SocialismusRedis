@@ -1,7 +1,7 @@
 package me.whereareiam.socialismus.module.redis.api.input;
 
-import me.whereareiam.socialismus.api.output.resource.CacheService;
-import me.whereareiam.socialismus.api.output.resource.sync.SyncService;
+import me.whereareiam.socialismus.service.resource.CacheService;
+import me.whereareiam.socialismus.service.resource.sync.SyncService;
 
 /**
  * Exposed in common-api so both core and modules can inject it

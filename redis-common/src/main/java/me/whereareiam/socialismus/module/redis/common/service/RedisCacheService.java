@@ -3,7 +3,7 @@ package me.whereareiam.socialismus.module.redis.common.service;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import lombok.RequiredArgsConstructor;
-import me.whereareiam.socialismus.api.output.resource.CacheService;
+import me.whereareiam.socialismus.service.resource.CacheService;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.exceptions.JedisException;

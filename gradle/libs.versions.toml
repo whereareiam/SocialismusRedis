@@ -12,9 +12,13 @@ lombok = "1.18.42"
 guice = "7.0.0"
 jedis = "7.1.0"
 
+# testing
+junit = "6.0.1"
+mockito = "5.20.0"
+
 [libraries]
 
-socialismus = { group = "com.github.whereareiam", name = "Socialismus", version.ref = "socialismus" }
+socialismus = { group = "me.whereareiam", name = "Socialismus", version.ref = "socialismus" }
 
 # compile time processing
 lombok = { group = "org.projectlombok", name = "lombok", version.ref = "lombok" }
@@ -23,7 +27,15 @@ lombok = { group = "org.projectlombok", name = "lombok", version.ref = "lombok" 
 guice = { group = "com.google.inject", name = "guice", version.ref = "guice" }
 jedis = { group = "redis.clients", name = "jedis", version.ref = "jedis" }
 
+# testing
+junit-jupiter = { group = "org.junit.jupiter", name = "junit-jupiter", version.ref = "junit" }
+junit-platform = { group = "org.junit.platform", name = "junit-platform-launcher" }
+mockito-core = { group = "org.mockito", name = "mockito-core", version.ref = "mockito" }
+mockito-junit = { group = "org.mockito", name = "mockito-junit-jupiter", version.ref = "mockito" }
+
 [bundles]
+
+testing = ["junit-jupiter", "mockito-core", "mockito-junit"]
 
 [plugins]
 

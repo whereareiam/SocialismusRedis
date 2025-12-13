@@ -4,23 +4,19 @@ import com.google.inject.Guice;
 import com.google.inject.Inject;
 import com.google.inject.Injector;
 import lombok.RequiredArgsConstructor;
-import me.whereareiam.socialismus.api.Reloadable;
-import me.whereareiam.socialismus.api.input.registry.Registry;
-import me.whereareiam.socialismus.api.output.config.ConfigurationLoader;
-import me.whereareiam.socialismus.api.output.config.ConfigurationManager;
-import me.whereareiam.socialismus.api.output.module.SocialisticModule;
-import me.whereareiam.socialismus.api.output.resource.CacheService;
-import me.whereareiam.socialismus.api.output.resource.ResourceProvider;
-import me.whereareiam.socialismus.api.output.resource.sync.SyncService;
-import me.whereareiam.socialismus.api.type.ResourceType;
+import me.whereareiam.socialismus.Reloadable;
+import me.whereareiam.socialismus.module.SocialisticModule;
 import me.whereareiam.socialismus.module.redis.common.CommonConfiguration;
-import me.whereareiam.socialismus.module.redis.configuration.ConfigBinder;
+import me.whereareiam.socialismus.registry.base.Registry;
+import me.whereareiam.socialismus.service.resource.CacheService;
+import me.whereareiam.socialismus.service.resource.ResourceProvider;
+import me.whereareiam.socialismus.service.resource.sync.SyncService;
+import me.whereareiam.socialismus.type.ResourceType;
 
 import java.util.Map;
 
 @RequiredArgsConstructor(onConstructor_ = {@Inject})
 public class SocialismusRedis extends SocialisticModule implements ResourceProvider {
-	private final Injector parentInjector;
 	private final Registry<Reloadable> reloadableRegistry;
 	private Injector injector;
 
@@ -29,12 +25,9 @@ public class SocialismusRedis extends SocialisticModule implements ResourceProvi
 		injector =
 				Guice.createInjector(
 						new SocialismusRedisInjectorConfiguration(
-								reloadableRegistry,
-								parentInjector.getInstance(ConfigurationManager.class),
-								parentInjector.getInstance(ConfigurationLoader.class)
+								reloadableRegistry
 						),
-						new CommonConfiguration(),
-						new ConfigBinder(workingPath));
+						new CommonConfiguration(workingPath));
 	}
 
 	@Override

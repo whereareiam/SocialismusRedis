@@ -2,3 +2,7 @@ dependencies {
     "compileOnly"(project(":redis-common-api"))
     "compileOnly"(libs.jedis)
 }
+
+tasks.test {
+    useJUnitPlatform()
+}
