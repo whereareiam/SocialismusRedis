@@ -1,8 +1,7 @@
-dependencies {
-    "compileOnly"(project(":redis-common-api"))
-    "compileOnly"(libs.jedis)
+plugins {
+    id("shared")
 }
 
-tasks.test {
-    useJUnitPlatform()
+dependencies {
+    compileOnly(libs.jedis)
 }
