@@ -15,7 +15,7 @@ jedis = "7.5.2"
 annotations = "26.1.0"
 
 # testing
-junit = "6.1.0"
+junit = "6.1.1"
 mockito = "5.23.0"
 
 [libraries]
